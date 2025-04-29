@@ -1,10 +1,8 @@
-.DS_Store
-.env
-*.pyc
-*.pyo
-env/
-venv/
-.venv/
-env*
-dist/
-build/
+node_modules
+.env.keys
+.env.me
+.flaskenv*
+!.env.project
+!.env.vault
+.env.previous
+# .env*
