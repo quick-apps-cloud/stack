@@ -1,5 +1,4 @@
-#!/bin/bash -i
-
+#!/bin/bash
 install_dokploy() {
     if [ "$(id -u)" != "0" ]; then
         echo "This script must be run as root" >&2
@@ -112,7 +111,7 @@ install_dokploy() {
     --network dokploy-network \
     --env POSTGRES_USER=dokploy \
     --env POSTGRES_DB=dokploy \
-    --env POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
+    --env POSTGRES_PASSWORD=amukds4wi9001583845717ad2 \
     --mount type=volume,source=dokploy-postgres-database,target=/var/lib/postgresql/data \
     postgres:16
  
