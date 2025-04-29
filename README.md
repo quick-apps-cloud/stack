@@ -34,9 +34,58 @@ A **Quick Apps** é uma solução de Cloud baseada em uma rede de servidores int
 Este guia é voltado tanto para iniciantes quanto para profissionais que desejam implantar e gerenciar aplicações em ambientes distribuídos com Docker Swarm. Sinta-se à vontade para contribuir, sugerir melhorias ou relatar problemas!
 
 
-# Guia de Instalação
+# Guia de instalação
 
-1. Clonar o repositório dentro da máquina após formatar a máquina para Ubuntu 24.04.2 LTS
+Este guia fornece os passos necessários para configurar um servidor com a stack Quick Apps.
 
-2. Executar o script `setup.sh` 
+## 1. Preparação do Servidor
 
+### Requisitos Mínimos
+- Ubuntu Server (20.04 LTS ou superior)
+- Mínimo 2GB RAM
+- 20GB de espaço em disco
+- Acesso root ou sudo
+
+### Configuração Inicial
+
+1. Primeiro, clone este repositório:
+```bash
+git clone https://github.com/quick-apps-cloud/stack.git
+cd stack
+```
+
+2. Execute o script de setup automático:
+```bash
+chmod +x ubuntu/setup.sh
+./ubuntu/setup.sh
+```
+
+Este script irá:
+- Atualizar o sistema
+- Instalar o Docker e Docker Compose
+- Configurar o Docker para iniciar automaticamente
+- Instalar Node.js
+- Instalar utilitários necessários (dotenvx e dotenv-vault)
+
+## 2. Verificação da Instalação
+
+Após a execução do script, verifique se tudo foi instalado corretamente:
+
+```bash
+# Verifique a versão do Docker
+docker --version
+
+# Verifique a versão do Docker Compose
+docker-compose --version
+
+# Verifique a versão do Node.js
+node --version
+```
+
+3. Configuração do Dotenv-Vault
+
+Execute o comando abaixo apenas alterando o valor para o token disponível no site dotenv.org para a organização e projeto relacionados.
+
+```
+npx dotenv-vault login <SEU_TOKEN_ME>
+```
