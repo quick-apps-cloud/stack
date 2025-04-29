@@ -91,5 +91,5 @@ dotenv-vault --version
 Execute o comando abaixo apenas alterando o valor para o token disponível no site dotenv.org para a organização e projeto relacionados.
 
 ```
-npx dotenv-vault login <SEU_TOKEN_ME>
+dotenv-vault login <SEU_TOKEN_ME>
 ```
