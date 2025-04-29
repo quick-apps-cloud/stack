@@ -36,6 +36,17 @@ echo 'alias dotenv-vault="docker run -w $(pwd) -v $(pwd):$(pwd) -it dotenv/doten
 docker pull dotenv/dotenvx
 echo 'alias dotenvx="docker run -it --rm -v $(pwd):/app dotenv/dotenvx"' >> ~/.bashrc
 
+# Definir mais alguns alias
+echo 'alias chmodx="chmod -X ./**/*.sh"' >> ~/.bashrc
+echo 'alias grk="git restore *"' >> ~/.bashrc
+echo 'alias gck="git checkout ."' >> ~/.bashrc
+echo 'alias gcm="git commit -m"' >> ~/.bashrc
+echo 'alias gca="git commit --amend --no-edit"' >> ~/.bashrc
+echo 'alias gpl="git pull"' >> ~/.bashrc
+echo 'alias gpu="git push"' >> ~/.bashrc
+echo 'alias gco="git checkout"' >> ~/.bashrc
+echo 'alias gss="git status"' >> ~/.bashrc
+
 # Carregar as regras do bashrc
 source ~/.bashrc
 
