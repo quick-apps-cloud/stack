@@ -1,3 +1,3 @@
 #!/bin/bash
 
-dotenvx run -- sh -c './_manual_installation.sh'
+npx @dotenvx/dotenvx run -- sh -c './_manual_installation.sh'
