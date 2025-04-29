@@ -28,11 +28,12 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 # Dê permissão de execução ao Docker Compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Install Node.js
-# sudo apt install nodejs -y
-
 # Instalar o dotenv-vault
-# docker run -w $(pwd) -v $(pwd):$(pwd) -it dotenv/dotenv-vault push
+docker run -w $(pwd) -v $(pwd):$(pwd) -it dotenv/dotenv-vault --version
 
-# Instalar o dotenv
-# docker run -it --rm -v $(pwd):/app dotenv/dotenvx help
+# Instalar o dotenvx
+docker run -it --rm -v $(pwd):/app dotenv/dotenvx help
+
+# Alias
+alias dotenvx="docker run -it --rm -v $(pwd):/app dotenv/dotenvx"
+alias dotenv-vault="docker run -w $(pwd) -v $(pwd):$(pwd) -it dotenv/dotenv-vault"

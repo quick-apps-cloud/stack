@@ -56,15 +56,14 @@ cd stack
 
 2. Execute o script de setup automático:
 ```bash
-chmod +x ubuntu/setup.sh
-./ubuntu/setup.sh
+chmod +x **/*.sh
+sudo ./ubuntu/setup.sh
 ```
 
 Este script irá:
 - Atualizar o sistema
 - Instalar o Docker e Docker Compose
 - Configurar o Docker para iniciar automaticamente
-- Instalar Node.js
 - Instalar utilitários necessários (dotenvx e dotenv-vault)
 
 ## 2. Verificação da Instalação
@@ -78,8 +77,11 @@ docker --version
 # Verifique a versão do Docker Compose
 docker-compose --version
 
-# Verifique a versão do Node.js
-node --version
+# Verifique a versão do Dotenvx
+dotenvx --version
+
+# Verifique a versão do Dotenv-Vault
+dotenv-vault --version
 ```
 
 3. Configuração do Dotenv-Vault
