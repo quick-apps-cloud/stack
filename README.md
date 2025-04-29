@@ -51,12 +51,14 @@ Este guia fornece os passos necessários para configurar um servidor com a stack
 1. Primeiro, clone este repositório:
 ```bash
 git clone https://github.com/quick-apps-cloud/stack.git
+
+chmod -R 777 ./stack
+
 cd stack
 ```
 
 2. Execute o script de setup automático:
 ```bash
-chmod +x **/*.sh
 sudo ./ubuntu/setup.sh
 ```
 
