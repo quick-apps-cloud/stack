@@ -111,7 +111,7 @@ install_dokploy() {
     --network dokploy-network \
     --env POSTGRES_USER=dokploy \
     --env POSTGRES_DB=dokploy \
-    --env POSTGRES_PASSWORD=$postgres_password \
+    --env POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
     --mount type=volume,source=dokploy-postgres-database,target=/var/lib/postgresql/data \
     postgres:16
  
