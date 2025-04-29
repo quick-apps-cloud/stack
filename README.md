@@ -52,7 +52,7 @@ Este guia fornece os passos necessários para configurar um servidor com a stack
 ```bash
 git clone https://github.com/quick-apps-cloud/stack.git
 
-chmod -R 777 ./stack
+chmod -x **/*.sh
 
 cd stack
 ```
