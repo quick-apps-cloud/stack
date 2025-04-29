@@ -1,3 +1,3 @@
 #!/bin/bash -i
 source ~/.bashrc
-dotenvx run -- sh -c './_manual_installation.sh'
+dotenvx run -f .env -- sh -c './_manual_installation.sh'
