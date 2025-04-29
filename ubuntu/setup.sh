@@ -1,4 +1,4 @@
-#!/bin/bash -i
+#!/bin/bash
 
 # Atualize os pacotes
 sudo apt update && sudo apt upgrade -y
@@ -29,11 +29,16 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Instalar o dotenv-vault
-docker run -w $(pwd) -v $(pwd):$(pwd) -it dotenv/dotenv-vault --version
+docker pull dotenv/dotenv-vault
+echo 'alias dotenv-vault="docker run -w $(pwd) -v $(pwd):$(pwd) -it dotenv/dotenv-vault"' >> ~/.bashrc
 
 # Instalar o dotenvx
-docker run -it --rm -v $(pwd):/app dotenv/dotenvx help
+docker pull dotenv/dotenvx
+echo 'alias dotenvx="docker run -it --rm -v $(pwd):/app dotenv/dotenvx"' >> ~/.bashrc
 
-# Alias
-alias dotenvx="docker run -it --rm -v $(pwd):/app dotenv/dotenvx"
-alias dotenv-vault="docker run -w $(pwd) -v $(pwd):$(pwd) -it dotenv/dotenv-vault"
+# Carregar as regras do bashrc
+source ~/.bashrc
+
+# Verificar a instalação
+dotenvx --version
+dotenv-vault --version

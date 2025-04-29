@@ -1,3 +1,3 @@
-#!/bin/bash -i
+#!/bin/bash
 
-dotenvx run -- sh -c './_manual_installation.sh'
+docker run -it --rm -v $(pwd):/app dotenv/dotenvx run -- sh -c './_manual_installation.sh'

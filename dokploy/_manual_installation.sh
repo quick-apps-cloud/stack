@@ -1,4 +1,5 @@
 #!/bin/bash
+
 install_dokploy() {
     if [ "$(id -u)" != "0" ]; then
         echo "This script must be run as root" >&2
