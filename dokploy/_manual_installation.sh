@@ -133,7 +133,7 @@ install_dokploy() {
       --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
       --mount type=bind,source=/etc/dokploy,target=/etc/dokploy \
       --mount type=volume,source=dokploy-docker-config,target=/root/.docker \
-      --publish published=3090,target=3000,mode=host \
+      --publish published=3000,target=3000,mode=host \
       --update-parallelism 1 \
       --update-order stop-first \
       --constraint 'node.role == manager' \
@@ -187,7 +187,7 @@ install_dokploy() {
     echo ""
     printf "${GREEN}Congratulations, Dokploy is installed!${NC}\n"
     printf "${BLUE}Wait 15 seconds for the server to start${NC}\n"
-    printf "${YELLOW}Please go to http://${formatted_addr}:3090${NC}\n\n"
+    printf "${YELLOW}Please go to http://${formatted_addr}:3000${NC}\n\n"
 }
  
 update_dokploy() {
